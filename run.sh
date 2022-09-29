@@ -18,4 +18,6 @@ sed -i "1 i\ZSH_DISABLE_COMPFIX=\"true\"" ~/.zshrc
 sed -i "s/ZSH_THEME=\"robbyrussell\"/ZSH_THEME=\"powerlevel10k\/powerlevel10k\"/g" $HOME/.zshrc
 sed -i "s/plugins=(git)/plugins=(git extract z zsh-syntax-highlighting zsh-autosuggestions fast-syntax-highlighting)/g" $HOME/.zshrc
 
+zsh
+sed -i "1 i\ZSH_DISABLE_COMPFIX=\"true\"" ~/.zshrc
 source ~/.zshrc
