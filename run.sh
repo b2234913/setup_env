@@ -14,8 +14,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-$HOME/.
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
 
-
-sed -i "s/ZSH_THEME=\"robbyrussell\"/ZSH_THEME=\"powerlevel10k\/powerlevel10k\"/g" ~/.zshrc
-sed -i "s/plugins=(git)/plugins=(git extract z zsh-syntax-highlighting zsh-autosuggestions fast-syntax-highlighting)/g" ~/.zshrc
+sed -i "1 i\ZSH_DISABLE_COMPFIX=\"true\"" ~/.zshrc 
+sed -i "s/ZSH_THEME=\"robbyrussell\"/ZSH_THEME=\"powerlevel10k\/powerlevel10k\"/g" $HOME/.zshrc
+sed -i "s/plugins=(git)/plugins=(git extract z zsh-syntax-highlighting zsh-autosuggestions fast-syntax-highlighting)/g" $HOME/.zshrc
 
 source ~/.zshrc
