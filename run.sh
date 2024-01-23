@@ -21,3 +21,4 @@ sed -i "s/plugins=(git)/plugins=(git extract z zsh-syntax-highlighting zsh-autos
 zsh
 sed -i "1 i\ZSH_DISABLE_COMPFIX=\"true\"" ~/.zshrc
 source ~/.zshrc
+sudo chsh -s $(which zsh)
